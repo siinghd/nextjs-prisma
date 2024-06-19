@@ -6,7 +6,7 @@
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
@@ -18,10 +18,14 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@node-rs/argon2": "^1.8.3",
     "@prisma/client": "^5.15.1",
+    "jose": "^5.4.1",
     "next": "15.0.0-rc.0",
+    "next-auth": "5.0.0-beta.19",
     "react": "19.0.0-rc-f994737d14-20240522",
-    "react-dom": "19.0.0-rc-f994737d14-20240522"
+    "react-dom": "19.0.0-rc-f994737d14-20240522",
+    "winston": "^3.13.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -38,5 +42,8 @@
     "prisma": "^5.15.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "browser": {
+    "@node-rs/argon2": false
   }
 }
